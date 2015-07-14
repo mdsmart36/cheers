@@ -7,3 +7,6 @@ c:\users\matthew\documents\visual studio 2015\Projects\ConsoleApplication1\Conso
 C:\Users\Matthew\Documents\Visual Studio 2015\Projects\ConsoleApplication1\cheers\csharp\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
 C:\Users\Matthew\Documents\Visual Studio 2015\Projects\ConsoleApplication1\cheers\csharp\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
 C:\Users\Matthew\Documents\Visual Studio 2015\Projects\ConsoleApplication1\cheers\csharp\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+C:\Users\Matthew\Documents\Visual Studio 2015\Projects\ConsoleApplication1\cheers\csharp\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Users\Matthew\Documents\Visual Studio 2015\Projects\ConsoleApplication1\cheers\csharp\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Users\Matthew\Documents\Visual Studio 2015\Projects\ConsoleApplication1\cheers\csharp\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache

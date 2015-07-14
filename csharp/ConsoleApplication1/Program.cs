@@ -6,13 +6,13 @@ namespace ConsoleApplication1
     {
         public static void Main(string[] args)
         {
-            string article;
-            char[] vowels = { 'a', 'e', 'i', 'o', 'u' };
+            string article; // "a" or "an"
+            char[] vowels = new char[5] { 'a', 'e', 'i', 'o', 'u' }; // array of vowels
 
             // Prompt user to type a name
             Console.Write("Please enter your name: ");
             string input = Console.ReadLine();
-            
+            input = input.ToLower();
 
             // print out the cheer
             // for each character in the name
@@ -20,6 +20,7 @@ namespace ConsoleApplication1
 
             for (int i = 0; i < input.Length; i++)
             {
+                // is this character a member of the vowel array?
                 article = Array.IndexOf(vowels, input[i]) < 0 ? "a" : "an";
                 Console.WriteLine("Give me {0}..{1}", article, input[i]);
             }
