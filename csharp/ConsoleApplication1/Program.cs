@@ -7,13 +7,7 @@ namespace ConsoleApplication1
 
         public static string getDaysUntilBirthday(int difference)
         {
-            if (difference < 0)
-            {
-                return (Math.Abs(difference)).ToString();
-            } else
-            {
-                return (365 - difference).ToString();
-            }
+            return (difference < 0) ? (Math.Abs(difference).ToString()) : (365 - difference).ToString();
         }
 
         public static void Main(string[] args)
@@ -42,26 +36,18 @@ namespace ConsoleApplication1
             // print out the cheer
             // for each character in the name
             //     print out the line for the appropriate cheer
-
-            for (int i = 0; i < input.Length; i++)
+            
+            foreach (var letter in input)
             {
-                // is this character a member of the vowel array?
-                article = Array.IndexOf(vowels, input[i]) < 0 ? "a" : "an";
-                Console.WriteLine("Give me {0}..{1}", article, input[i]);
+                article = Array.IndexOf(vowels, letter) < 0 ? "a" : "an";
+                Console.WriteLine("Give me {0}..{1}", article, letter);
             }
             
             // print out final line with name in uppercase
             Console.WriteLine("\n{0} is.. GRAND\n", input.ToUpper());
             
-
-            if (difference == 0)
-            {
-                Console.WriteLine("Happy Birthday!!");
-            }
-            else
-            {
-                Console.WriteLine("Your birthday is {0} days away.", getDaysUntilBirthday(difference));
-            }
+            Console.WriteLine( (difference == 0) ? "Happy Birthday!!" : 
+                "Your birthday is {0} days away.", getDaysUntilBirthday(difference) );
 
             Console.ReadLine();
         }
