@@ -5,7 +5,7 @@ namespace ConsoleApplication1
     class Program
     {
 
-        public static string getDaysUntilBirthday(int difference)
+        private static string getDaysUntilBirthday(int difference)
         {
             return (difference < 0) ? (Math.Abs(difference).ToString()) : (365 - difference).ToString();
         }
@@ -27,23 +27,19 @@ namespace ConsoleApplication1
             // parse string into month and day
             string[] monthAndDay = bday.Split('/');
 
-            // create DateTime object for birthday
+            // create DateTime object for birthday (Year, Month, Day)
             DateTime birthday = new DateTime(DateTime.Today.Year, int.Parse(monthAndDay[0]), int.Parse(monthAndDay[1]));
 
             // calculate difference between today and next birthday
             int difference = DateTime.Today.Subtract(birthday).Days;
             
-            // print out the cheer
-            // for each character in the name
-            //     print out the line for the appropriate cheer
-            
+            // print out the cheer with appropriate "a" or "an" if the letter is a consonant or vowel
             foreach (var letter in input)
             {
                 article = Array.IndexOf(vowels, letter) < 0 ? "a" : "an";
                 Console.WriteLine("Give me {0}..{1}", article, letter);
             }
             
-            // print out final line with name in uppercase
             Console.WriteLine("\n{0} is.. GRAND\n", input.ToUpper());
             
             Console.WriteLine( (difference == 0) ? "Happy Birthday!!" : 
